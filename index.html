@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>虹模拟 - 玻璃窑炉模拟应用</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>虹模拟</h1>
+      <p class="tagline">玻璃窑炉离线模拟与参数分析平台</p>
+    </header>
+    <main class="app-layout">
+      <section class="panel controls" aria-label="参数控制">
+        <h2>窑炉参数</h2>
+        <div id="parameter-controls" class="control-grid" role="group"></div>
+        <div class="composition-panel" aria-label="玻璃成分配置">
+          <h3>玻璃成分</h3>
+          <div id="composition-list"></div>
+          <div class="composition-total" id="composition-total" aria-live="polite"></div>
+        </div>
+        <div class="configuration-panel" aria-label="炉池结构配置">
+          <h3>池炉分区尺寸</h3>
+          <div id="section-configuration"></div>
+        </div>
+        <div class="configuration-panel" aria-label="炉衬层配置">
+          <h3>炉衬层材料</h3>
+          <div id="layer-configuration"></div>
+        </div>
+      </section>
+      <section class="panel visualization" aria-label="状态概览">
+        <h2>状态概览</h2>
+        <div class="viewport-wrapper">
+          <div id="furnace-viewport" class="furnace-viewport" role="application" aria-label="三维窑炉视图"></div>
+          <div id="viewport-overlay" class="viewport-overlay" aria-live="polite"></div>
+        </div>
+        <div class="status-cards" id="status-cards"></div>
+      </section>
+      <section class="panel simulation" aria-label="运行模拟">
+        <h2>模拟控制</h2>
+        <div id="simulation-controls"></div>
+        <div id="simulation-status" class="simulation-status"></div>
+        <div id="simulation-timeline" class="simulation-timeline"></div>
+      </section>
+      <section class="panel event-log" aria-label="参数变更记录">
+        <h2>事件记录</h2>
+        <ul id="event-log" class="event-list" aria-live="polite"></ul>
+      </section>
+    </main>
+    <footer class="app-footer">
+      <p>虹模拟 &copy; 2024 · 面向工业的玻璃窑炉模拟平台</p>
+    </footer>
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+</html>
