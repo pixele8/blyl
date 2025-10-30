@@ -1,0 +1,15 @@
+{
+  "name": "hong-simulator",
+  "version": "0.1.0",
+  "description": "虹模拟 - 玻璃窑炉离线模拟应用基础前端",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": ["furnace", "simulation", "glass", "offline", "hong"],
+  "author": "虹模拟项目组",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
