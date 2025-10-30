@@ -9,12 +9,16 @@
 
 ## 本地开发
 
+仓库已经包含可直接运行的 `dist/main.js`，无需额外工具即可在浏览器中双击 `index.html` 离线体验。
+
+若需修改源码，可执行以下步骤重新打包：
+
 ```bash
 npm install
-npm run build
+npm run bundle
 ```
 
-构建后，直接在浏览器中打开 `index.html` 即可离线运行当前原型。
+命令会调用 [esbuild](https://esbuild.github.io/) 将 TypeScript 源码及 three.js 依赖打包成单一脚本，方便在 `file://` 环境下运行。
 
 ### 前端界面速览
 
@@ -30,7 +34,7 @@ npm run build
 
 ```
 ├── docs/                    # 项目需求与设计文档
-├── dist/                    # TypeScript 编译后的 ES 模块
+├── dist/                    # 打包后的浏览器脚本（可直接离线使用）
 ├── src/                     # TypeScript 源码
 ├── styles/                  # 样式文件
 ├── index.html               # 离线单页应用入口

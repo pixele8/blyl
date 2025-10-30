@@ -4,12 +4,20 @@
   "description": "虹模拟 - 玻璃窑炉离线模拟应用基础前端",
   "scripts": {
     "build": "tsc",
-    "watch": "tsc --watch"
+    "watch": "tsc --watch",
+    "bundle": "esbuild src/main.ts --bundle --format=iife --target=es2018 --platform=browser --minify --outfile=dist/main.js"
   },
-  "keywords": ["furnace", "simulation", "glass", "offline", "hong"],
+  "keywords": [
+    "furnace",
+    "simulation",
+    "glass",
+    "offline",
+    "hong"
+  ],
   "author": "虹模拟项目组",
   "license": "MIT",
   "devDependencies": {
+    "esbuild": "^0.25.11",
     "typescript": "^5.4.0"
   }
 }
